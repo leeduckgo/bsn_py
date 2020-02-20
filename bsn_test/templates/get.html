@@ -1,0 +1,57 @@
+<html lang="zh-CN">
+<head>
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>BSN 数据上链演示Demo</title>
+</head>
+
+<body role="document">
+<!-- 导航栏 -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">BSN 数据上链演示Demo</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+
+                <li class="active"><a href="/save/">保存数据</a></li>
+                <li class="active"><a href="/get/">获取数据</a></li>
+                <li class="active"><a href="/update/">修改数据</a></li>
+                <li class="active"><a href="/delete/">删除数据</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<form method="post" action="/get_data/">
+    <div  class="col-sm-20" style="padding-top:100px;margin-left:300px" >
+        <span style="font-size:25px;color:black"> 获取数据 </span> <br><br>
+        <p>唯一标识：<input type="text" name="baseKey" value="{{ baseKey }}"/><span style="color:red"> {{ hint }}</span></p>
+        <p>响应结果：<input type="text" name="baseInfo"  disabled="disabled"  style="height: 100px;color: #000000;" value="{{ baseInfo }}"/></p>
+        <p>交易ID：<span> {{ txId }}</span></p>
+
+        {% if messages %}
+            <script>
+                {% for msg in messages %}
+                    alert('{{ msg.message }}');
+                {% endfor %}
+            </script>
+        {% endif %}
+
+        <div style="margin-left:110px">
+        <button id="btn" type="submit">获取数据</button>
+        </div>
+        <!--button type="reset" class="but but_default">重置</button-->
+
+
+    </div>
+</form>
+
+
+</body>
+
+
+</html>
