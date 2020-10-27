@@ -5,7 +5,7 @@ certifi==2019.6.16
 cffi==1.12.3
 chardet==3.0.4
 Click==7.0
-cryptography==2.7
+cryptography==3.2
 Django==2.2.5
 django-bootstrap3==11.1.0
 fabric-sdk-py==0.8.1
