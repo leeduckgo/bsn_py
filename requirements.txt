@@ -6,7 +6,7 @@ cffi==1.12.3
 chardet==3.0.4
 Click==7.0
 cryptography==2.7
-Django==2.2.5
+Django==2.2.18
 django-bootstrap3==11.1.0
 fabric-sdk-py==0.8.1
 Flask==1.1.1
