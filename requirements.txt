@@ -16,7 +16,7 @@ grpcio==1.23.0
 hkdf==0.0.3
 idna==2.8
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 lark-parser==0.7.1
 locustio==0.11.0
 MarkupSafe==1.1.1
